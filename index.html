@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<title>RS Contact Management</title>
+<meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//www.recaptcha.net' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="RS Contact Management &raquo; Feed" href="./feed/" />
+<link rel="alternate" type="application/rss+xml" title="RS Contact Management &raquo; Comments Feed" href="./comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":".\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='ayecode-ui-css'  href='./wp-content/plugins/userswp/vendor/ayecode/wp-ayecode-ui/assets/css/ayecode-ui-compatibility.css?ver=4.3.1' type='text/css' media='all' />
+<style id='ayecode-ui-inline-css' type='text/css'>
+			
+							
+			
+</style>
+<link rel='stylesheet' id='user-registration-general-css'  href='./wp-content/plugins/user-registration/assets/css/user-registration.css?ver=1.8.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='user-registration-smallscreen-css'  href='./wp-content/plugins/user-registration/assets/css/user-registration-smallscreen.css?ver=1.8.7.1' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='user-registration-my-account-layout-css'  href='./wp-content/plugins/user-registration/assets/css/my-account-layout.css?ver=1.8.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sweetalert2-css'  href='./wp-content/plugins/user-registration/assets/css/sweetalert2/sweetalert2.min.css?ver=8.17.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='./wp-includes/css/dashicons.min.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='airi-bootstrap-css'  href='./wp-content/themes/airi/css/bootstrap/bootstrap.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='./wp-includes/css/dist/block-library/style.min.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='airi-style-css'  href='./wp-content/themes/airi/style.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='airi-font-awesome-css'  href='./wp-content/themes/airi/css/font-awesome/css/font-awesome.min.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='./wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='./wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css'  href='./wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='./wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-31-css'  href='./wp-content/uploads/elementor/css/post-31.css?ver=1603631973' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://use.fontawesome.com/releases/v5.15.1/css/all.css?wpfas=true' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-shims-css'  href='https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css?wpfas=true' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.5.1' type='text/css' media='all' />
+<script type='text/javascript' src='./wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script type='text/javascript' src='./wp-content/plugins/userswp/vendor/ayecode/wp-ayecode-ui/assets/js/select2.min.js?ver=4.0.11' id='select2-js'></script>
+<script type='text/javascript' src='./wp-content/plugins/userswp/vendor/ayecode/wp-ayecode-ui/assets/js/bootstrap.bundle.min.js?ver=4.3.1' id='bootstrap-js-bundle-js'></script>
+<script type='text/javascript' id='bootstrap-js-bundle-js-after'>
+			
+
+				/**
+				 * An AUI bootstrap adaptation of GreedyNav.js ( by Luke Jackson ).
+				 *
+				 * Simply add the class `greedy` to any <nav> menu and it will do the rest.
+				 * Licensed under the MIT license - http://opensource.org/licenses/MIT
+				 * @ver 0.0.1
+				 */
+				function aui_init_greedy_nav(){
+					jQuery('nav.greedy').each(function(i, obj) {
+
+						// Check if already initialized, if so continue.
+						if(jQuery(this).hasClass("being-greedy")){return true;}
+
+						// Make sure its always expanded
+						jQuery(this).addClass('navbar-expand');
+
+						// vars
+						var $vlinks = '';
+						var $dDownClass = '';
+						if(jQuery(this).find('.navbar-nav').length){
+							$vlinks = jQuery(this).find('.navbar-nav').addClass("being-greedy w-100");
+						}else if(jQuery(this).find('.nav').length){
+							$vlinks = jQuery(this).find('.nav').addClass("being-greedy w-100");
+							$dDownClass = ' mt-2 ';
+						}else{
+							return false;
+						}
+
+						jQuery($vlinks).append('<li class="nav-item list-unstyled ml-auto greedy-btn d-none dropdown ">' +
+							'<a href="javascript:void(0)" data-toggle="dropdown" class="nav-link"><i class="fas fa-ellipsis-h"></i> <span class="greedy-count badge badge-dark badge-pill"></span></a>' +
+							'<ul class="greedy-links dropdown-menu  dropdown-menu-right '+$dDownClass+'"></ul>' +
+							'</li>');
+
+						var $hlinks = jQuery(this).find('.greedy-links');
+						var $btn = jQuery(this).find('.greedy-btn');
+
+						var numOfItems = 0;
+						var totalSpace = 0;
+						var closingTime = 1000;
+						var breakWidths = [];
+
+						// Get initial state
+						$vlinks.children().outerWidth(function(i, w) {
+							totalSpace += w;
+							numOfItems += 1;
+							breakWidths.push(totalSpace);
+						});
+
+						var availableSpace, numOfVisibleItems, requiredSpace, buttonSpace ,timer;
+
+						/*
+						 The check function.
+						 */
+						function check() {
+
+							// Get instant state
+							buttonSpace = $btn.width();
+							availableSpace = $vlinks.width() - 10;
+							numOfVisibleItems = $vlinks.children().length;
+							requiredSpace = breakWidths[numOfVisibleItems - 1];
+
+							// There is not enough space
+							if (numOfVisibleItems > 1 && requiredSpace > availableSpace) {
+								$vlinks.children().last().prev().prependTo($hlinks);
+								numOfVisibleItems -= 1;
+								check();
+								// There is more than enough space
+							} else if (availableSpace > breakWidths[numOfVisibleItems]) {
+								$hlinks.children().first().insertBefore($btn);
+								numOfVisibleItems += 1;
+								check();
+							}
+							// Update the button accordingly
+							jQuery($btn).find(".greedy-count").html( numOfItems - numOfVisibleItems);
+							if (numOfVisibleItems === numOfItems) {
+								$btn.addClass('d-none');
+							} else $btn.removeClass('d-none');
+						}
+
+						// Window listeners
+						jQuery(window).resize(function() {
+							check();
+						});
+
+						// do initial check
+						check();
+					});
+				}
+
+				/**
+				 * Initiate Select2 items.
+				 */
+				function aui_init_select2(){
+					jQuery("select.aui-select2").select2();
+				}
+
+				/**
+				 * A function to convert a time value to a "ago" time text.
+				 *
+				 * @param selector string The .class selector
+				 */
+				function aui_time_ago(selector) {
+
+					var templates = {
+						prefix: "",
+						suffix: " ago",
+						seconds: "less than a minute",
+						minute: "about a minute",
+						minutes: "%d minutes",
+						hour: "about an hour",
+						hours: "about %d hours",
+						day: "a day",
+						days: "%d days",
+						month: "about a month",
+						months: "%d months",
+						year: "about a year",
+						years: "%d years"
+					};
+					var template = function (t, n) {
+						return templates[t] && templates[t].replace(/%d/i, Math.abs(Math.round(n)));
+					};
+
+					var timer = function (time) {
+						if (!time)
+							return;
+						time = time.replace(/\.\d+/, ""); // remove milliseconds
+						time = time.replace(/-/, "/").replace(/-/, "/");
+						time = time.replace(/T/, " ").replace(/Z/, " UTC");
+						time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); // -04:00 -> -0400
+						time = new Date(time * 1000 || time);
+
+						var now = new Date();
+						var seconds = ((now.getTime() - time) * .001) >> 0;
+						var minutes = seconds / 60;
+						var hours = minutes / 60;
+						var days = hours / 24;
+						var years = days / 365;
+
+						return templates.prefix + (
+								seconds < 45 && template('seconds', seconds) ||
+								seconds < 90 && template('minute', 1) ||
+								minutes < 45 && template('minutes', minutes) ||
+								minutes < 90 && template('hour', 1) ||
+								hours < 24 && template('hours', hours) ||
+								hours < 42 && template('day', 1) ||
+								days < 30 && template('days', days) ||
+								days < 45 && template('month', 1) ||
+								days < 365 && template('months', days / 30) ||
+								years < 1.5 && template('year', 1) ||
+								template('years', years)
+							) + templates.suffix;
+					};
+
+					var elements = document.getElementsByClassName(selector);
+					for (var i in elements) {
+						var $this = elements[i];
+						if (typeof $this === 'object') {
+							$this.innerHTML = '<i class="far fa-clock"></i> ' + timer($this.getAttribute('title') || $this.getAttribute('datetime'));
+						}
+					}
+					// update time every minute
+					setTimeout(aui_time_ago, 60000);
+
+				}
+
+				/**
+				 * Initiate tooltips on the page.
+				 */
+				function aui_init_tooltips(){
+					jQuery('[data-toggle="tooltip"]').tooltip();
+					jQuery('[data-toggle="popover"]').popover();
+					jQuery('[data-toggle="popover-html"]').popover({
+						html: true
+					});
+
+					// fix popover container compatibility
+					jQuery('[data-toggle="popover"],[data-toggle="popover-html"]').on('inserted.bs.popover', function () {
+						jQuery('body > .popover').wrapAll("<div class='bsui' />");
+					});
+				}
+
+				/**
+				 * Initiate flatpickrs on the page.
+				 */
+				function aui_init_flatpickr(){
+					if ( jQuery.isFunction(jQuery.fn.flatpickr) ) {
+						jQuery("input.aui-flatpickr").flatpickr();
+					}
+				}
+
+				/**
+				 * Initiate all AUI JS.
+				 */
+				function aui_init(){
+					// init tooltips
+					aui_init_tooltips();
+
+					// init select2
+					aui_init_select2();
+
+					// init flatpickr
+					aui_init_flatpickr();
+
+					// init Greedy nav
+					aui_init_greedy_nav();
+
+					// Set times to time ago
+					aui_time_ago('timeago');
+				}
+
+				// run on window loaded
+				jQuery(window).load(function() {
+					aui_init();
+				});
+			
+			
+</script>
+<script type='text/javascript' id='userswp-js-extra'>
+/* <![CDATA[ */
+var uwp_localize_data = {"uwp_more_char_limit":"100","uwp_more_text":"more","uwp_less_text":"less","error":"Something went wrong.","error_retry":"Something went wrong, please retry.","uwp_more_ellipses_text":"...","ajaxurl":".\/wp-admin\/admin-ajax.php","login_modal":"1","register_modal":"1","forgot_modal":"1","default_banner":".\/wp-content\/plugins\/userswp\/assets\/images\/banner.png"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='./wp-content/plugins/userswp/assets/js/users-wp.min.js?ver=1.2.2.6' id='userswp-js'></script>
+<link rel="https://api.w.org/" href="./wp-json/" /><link rel="alternate" type="application/json" href="./wp-json/wp/v2/pages/208" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="./xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5.1" />
+<link rel="canonical" href="./" />
+<link rel='shortlink' href='./' />
+<link rel="alternate" type="application/json+oembed" href="./wp-json/oembed/1.0/embed?url=.%2F" />
+<link rel="alternate" type="text/xml+oembed" href="./wp-json/oembed/1.0/embed?url=.%2F&#038;format=xml" />
+<script type="text/javascript">
+           var ajaxurl = "./wp-admin/admin-ajax.php";
+         </script><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #a3ceff; }
+</style>
+			<style type="text/css" id="wp-custom-css">
+			.site-info { display: none; }		</style>
+		<style id="kirki-inline-styles">h1,h2,h3,h4,h5,h6,.site-title{font-family:Work Sans;font-weight:500;}body{font-family:Work Sans;font-weight:400;font-size:16px;}.site-title{font-size:36px;}.site-description{font-size:16px;}.main-navigation ul ul li{font-size:13px;}.single-post .entry-title{font-size:36px;color:#191919;}.widget-area .widget-title{font-size:24px;}.widget-area .widget{font-size:16px;}.sidebar-column .widget-title{font-size:20px;}.sidebar-column .widget{font-size:16px;}.site-info{font-size:13px;}.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,.product div.entry-summary p.price, .product div.entry-summary span.price,.athemes-blog:not(.airi_athemes_blog_skin) .posted-on a,.athemes-blog:not(.airi_athemes_blog_skin) .byline a:hover,.testimonials-section.style1:before,.single-post .read-more-link .gt,.blog-loop .read-more-link .gt,.single-post .posted-on a,.blog-loop .posted-on a,.entry-title a:hover,.airi_recent_entries .post-date,.menuStyle3 .top-bar .contact-item .fa,.menuStyle4 .contact-area .contact-block .contact-icon,.widget_categories li:hover::before,.widget_categories li:hover a{color:#1e73be;}.product .single_add_to_cart_button.button.alt,.menuStyle4 .contact-area .contact-block .contact-icon,button,.button,input[type="button"],input[type="reset"],input[type="submit"]{border-color:#1e73be;}.woocommerce-checkout button.button.alt,.woocommerce-checkout button.button.alt:hover,.woocommerce-cart .cart-collaterals .cart_totals .button:hover,.woocommerce-cart .cart-collaterals .cart_totals .button,.product .single_add_to_cart_button.button.alt:hover,.product .single_add_to_cart_button.button.alt,.woocommerce ul.products li.product .button,.menuStyle2 .main-navigation a:hover:after, .menuStyle2 .main-navigation .current-menu-item:after,.comments-area .comment-reply-link:hover,.menuStyle4 .main-navigation .header-cta:before,.menuStyle4 .main-navigation .header-cta,button,.button,input[type="button"],input[type="reset"],input[type="submit"],.menuStyle3 .main-navigation a:hover:after,.menuStyle3 .main-navigation .current-menu-item:after{background-color:#1e73be;}.menuStyle2 .site-title a{color:#191919;}.menuStyle2 .sticky-wrapper.is-sticky .site-title a{color:#191919;}.menuStyle2 .site-description{color:#707070;}.menuStyle2 .sticky-wrapper.is-sticky .site-description{color:#707070;}.menuStyle2 .main-navigation a{color:#191919;}.menuStyle2 .sticky-wrapper.is-sticky .main-navigation a{color:#191919;}.menuStyle2 .site-header{background-color:#1e73be;}.menuStyle2 .is-sticky .site-header{background-color:#1e73be;}#site-navigation ul ul li a{color:#1c1c1c;}#site-navigation ul ul li{background-color:#90c2ed;}.entry-title a{color:#191919;}.single-post .post-cat, .blog-loop .post-cat{background-color:#eff1f4;}.single-post .entry-meta, .blog-loop .entry-meta{color:#bfbfbf;}.single-post .entry-meta .byline a, .blog-loop .entry-meta .byline a{color:#595959;}.single-post .entry-content, .blog-loop .entry-content{color:#595959;}.widget .widget-title{color:#191919;}.widget{color:#707070;}.widget a{color:#595959;}/* vietnamese */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./wp-content/fonts/work-sans/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBiAJoI3ZKyHaQfhf.woff) format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./wp-content/fonts/work-sans/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBiEJoI3ZKyHaQfhf.woff) format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./wp-content/fonts/work-sans/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8JoI3ZKyHaQQ.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./wp-content/fonts/work-sans/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K3vXBiAJoI3ZKyHaQfhf.woff) format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./wp-content/fonts/work-sans/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K3vXBiEJoI3ZKyHaQfhf.woff) format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./wp-content/fonts/work-sans/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K3vXBi8JoI3ZKyHaQQ.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}</style></head>
+
+<body class="home page-template-default page page-id-208 custom-background user-registration-page uwp_page uwp_users_page menuStyle2 menuNotContained sticky-header elementor-default elementor-kit-31 elementor-page elementor-page-208">
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		
+<header id="masthead" class="site-header">
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="site-branding col-md-4 col-sm-6 col-9">
+								<p class="site-title"><a href="./" rel="home">RS Contact Management</a></p>
+						</div><!-- .site-branding -->
+
+			<div class="header-mobile-menu col-md-8 col-sm-6 col-3">
+				<button class="mobile-menu-toggle" aria-controls="primary-menu">
+					<span class="mobile-menu-toggle_lines"></span>
+					<span class="sr-only">Toggle mobile menu</span>
+				</button>
+			</div>
+
+			<nav id="site-navigation" class="main-navigation col-md-8">
+				<div class="menu-main-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-208 current_page_item menu-item-212"><a href="./" aria-current="page">Home</a></li>
+<li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="./login/">Login</a></li>
+<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="./sign-up/">Sign Up</a></li>
+<li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="./person-details/">Person Details</a></li>
+<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="./person-form/">Person Form</a></li>
+</ul></div>
+						<ul class="header-search-cart">
+						<li class="header-search">
+				<div class="header-search-toggle"><a><i class="fa fa-search"></i></a></div>
+			</li>
+						<li class="header-cart-link">
+							</li>
+		</ul>
+					</nav><!-- #site-navigation -->
+
+		</div>
+	</div>
+	<div class="header-search-form">
+		<form role="search" method="get" class="search-form" action="./">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>	</div>	
+
+</header><!-- #masthead -->
+	<div id="content" class="site-content">
+
+	<div class="container"><div class="row">
+	<div id="primary" class="content-area col-lg-8 col-md-12">
+		<main id="main" class="site-main">
+
+			
+<article id="post-208" class="post-208 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Home</h1>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+				<div data-elementor-type="wp-page" data-elementor-id="208" class="elementor elementor-208" data-elementor-settings="[]">
+						<div class="elementor-inner">
+							<div class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-cd7d650 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cd7d650" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d9c9aba" data-id="d9c9aba" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-8cf8693 elementor-widget elementor-widget-shortcode" data-id="8cf8693" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-shortcode"><div class="uwp-users-class sdel-6b87a25b" ><div class="uwp_page"><div class="uwp-user-loop-action bsui sdel-d6dc0283" ><div class="container mb-3 overflow-visible">
+    <div class="row">
+        <div class="col-sm-8 p-0">
+			<div class="uwp-user-search bsui sdel-e5b7dd01" ><form class="uwp-user-search-form form-inline" method="get" action="./">
+    <div class="form-group mb-2 mr-md-2">
+        <label for="uwp-search-input" class="sr-only">Search for users...</label>
+        <div class="form-group"  ><label  for="uwp-search-input"  class="sr-only  " >Remember Me</label><input type="search"  name="uwps"  id="uwp-search-input"  placeholder="Search for users..."  class="form-control form-control-sm"  ></div>    </div>
+	<button type="submit "  class="btn btn-sm btn-outline-primary mb-2 uwp-search-submit"  >Search</button>
+	</form></div>        </div>
+        <div class="col-sm-4 p-0">
+
+            <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
+
+                <div class="btn-group btn-group-sm mr-2 uwp-user-sort" role="group">
+                    <button type="button"  id="uwp-user-sort"  class="btn btn-outline-primary rounded-right"  data-toggle="dropdown"  aria-haspopup="true"  aria-expanded="false"  ><i class="fas fa-sort" ></i> Sort By</button>
+                    <div class="dropdown-menu mt-3" aria-labelledby="uwp-user-sort">
+                        <h6 class="dropdown-header">Sort Options</h6>
+						<a href="./?uwp_sort_by=newer" class="dropdown-item "  >Newest</a>
+<a href="./?uwp_sort_by=older" class="dropdown-item "  >Oldest</a>
+<a href="./?uwp_sort_by=alpha_asc" class="dropdown-item "  >A-Z</a>
+<a href="./?uwp_sort_by=alpha_desc" class="dropdown-item "  >Z-A</a>
+                    </div>
+                </div>
+
+                <div class="btn-group btn-group-sm uwp-list-view-select" role="group" aria-label="First group">
+                    <div class="btn-group btn-group-sm" role="group">
+	                    <button type="button"  id="uwp-list-view-select-grid"  class="btn btn-outline-primary rounded-right uwp-list-view-select-grid"  data-toggle="dropdown"  aria-haspopup="true"  aria-expanded="false"  ><i class="fas fa-th" ></i></button>
+                        <div class="dropdown-menu dropdown-menu-right mt-3 p-0" aria-labelledby="uwp-list-view-select-grid">
+                            <button type="button"  class="dropdown-item"  data-gridview="1"  onclick="uwp_list_view_select(1);return false;"  >Grid 1</button>
+<button type="button"  class="dropdown-item"  data-gridview="2"  onclick="uwp_list_view_select(2);return false;"  >Grid 2</button>
+<button type="button"  class="dropdown-item"  data-gridview="3"  onclick="uwp_list_view_select(3);return false;"  >Grid 3</button>
+<button type="button"  class="dropdown-item"  data-gridview="4"  onclick="uwp_list_view_select(4);return false;"  >Grid 4</button>
+<button type="button"  class="dropdown-item"  data-gridview="5"  onclick="uwp_list_view_select(5);return false;"  >Grid 5</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+<div class="uwp-users-list bsui sdel-bb206716" ><div class="uwp-users-loop">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3"><div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/andre/" title="Andre Dubus">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/andre/" title="Andre Dubus">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="27">
+               <a href="./person-details/andre/" class="text-muted">                    Andre Dubus	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/antawn/" title="Antawn Jamison">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/antawn/" title="Antawn Jamison">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="5">
+               <a href="./person-details/antawn/" class="text-muted">                    Antawn Jamison	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/cecelia/" title="Cecelia Cichan">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/cecelia/" title="Cecelia Cichan">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="24">
+               <a href="./person-details/cecelia/" class="text-muted">                    Cecelia Cichan	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/chynna/" title="Chynna Phillips">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/chynna/" title="Chynna Phillips">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="6">
+               <a href="./person-details/chynna/" class="text-muted">                    Chynna Phillips	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/dan/" title="Dan Cortese">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/dan/" title="Dan Cortese">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="25">
+               <a href="./person-details/dan/" class="text-muted">                    Dan Cortese	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/jason/" title="Jason Chaffetz">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/jason/" title="Jason Chaffetz">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="22">
+               <a href="./person-details/jason/" class="text-muted">                    Jason Chaffetz	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/john/" title="John Caius">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/john/" title="John Caius">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="20">
+               <a href="./person-details/john/" class="text-muted">                    John Caius	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/justin/" title="Justin Duchscherer">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/justin/" title="Justin Duchscherer">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="28">
+               <a href="./person-details/justin/" class="text-muted">                    Justin Duchscherer	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/keir/" title="Keir Dullea">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/keir/" title="Keir Dullea">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="29">
+               <a href="./person-details/keir/" class="text-muted">                    Keir Dullea	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+<div class="col mb-4">
+	<div class="card uwp-users-list-user text-center h-100">
+			<div class="uwp-profile-header bsui sdel-95e97034" ><a href="./person-details/kiki/" title="Kiki Cuyler">	<img class="card-img-top m-0 p-0 uwp-banner-image" src="./wp-content/plugins/userswp/assets/images/banner.png"
+	     alt="User banner image">
+	</a>
+	
+<div class="card-body  text-center pb-0">
+
+	<div class="row justify-content-center">
+
+				<div class="col col-5 text-center tofront ">
+			<a href="./person-details/kiki/" title="Kiki Cuyler">			<img class="rounded-circle shadow border border-white border-width-4 p-0 mt-neg5"
+			     src="./wp-content/plugins/userswp/assets/images/no_profile.png" alt="User avatar">
+			</a>
+					</div>
+		
+		<div class="col-12  text-center ">
+			<ul class="list-group border-0 m-0 p-0 bg-transparent">
+				<li class="list-group-item border-0 m-0 p-0 bg-transparent uwp-profile-title">
+					        <div class="uwp-profile-name">
+            <h4 class="uwp-user-title h4 card-title text-dark  font-weight-bold m-0 p-0" data-user="7">
+               <a href="./person-details/kiki/" class="text-muted">                    Kiki Cuyler	           </a>	    	    </h4>
+        </div>
+        				</li>
+				<li class="list-group-item border-0 m-0 p-0  bg-transparent uwp-profile-post-counts">
+									</li>
+			</ul>
+		</div>
+		<div class="col-12  text-center pt-2">
+					</div>
+	</div>
+
+</div>
+
+</div><div class="uwp-output-location uwp-output-location-users"></div>	</div>
+</div>
+
+</div></div><!-- .uwp-users-loop -->
+
+		<script type="text/javascript">/* <![CDATA[ */
+
+			function uwp_list_view_select($val, $noStore) {
+
+				var $storage_key = "uwp_list_view";
+				var $list = jQuery('.uwp-users-loop > .row');
+				if(!$list.length){
+					$list = jQuery('.uwp-profile-cpt-loop > .row');
+					$storage_key = "uwp_cpt_list_view";
+				}
+
+				var $listSelect = jQuery('.uwp-list-view-select');
+				if ($val == 0) {
+					$list.removeClass('row-cols-sm-2 row-cols-md-2 row-cols-md-3 row-cols-md-4 row-cols-md-5').addClass('row-cols-md-0');
+					$listSelect.find('button').removeClass('active');
+					$listSelect.find('button.uwp-list-view-select-list').addClass('active');
+				} else {
+					$listSelect.find('button').removeClass('active');
+					$listSelect.find('button.uwp-list-view-select-grid').addClass('active');
+					$listSelect.find('button[data-gridview="'+$val+'"]').addClass('active');
+					$list.removeClass('row-cols-md-0 row-cols-md-2 row-cols-md-3 row-cols-md-4 row-cols-md-5').addClass('row-cols-sm-2 row-cols-md-'+$val);
+				}
+
+				// only store if it was a user action
+				if (!$noStore) {
+					// store the user selection
+					localStorage.setItem($storage_key, $val);
+				}
+			}
+
+			// set the current user selection if set
+			if (typeof(Storage) !== "undefined") {
+				var $storage_key = "uwp_list_view";
+				var $list = jQuery('.uwp-users-loop > .row');
+				if(!$list.length){
+					$list = jQuery('.uwp-profile-cpt-loop > .row');
+					$storage_key = "uwp_cpt_list_view";
+				}
+				var $noStore = false;
+				var uwp_list_view = localStorage.getItem($storage_key);
+				setTimeout(function () {
+					if (!uwp_list_view) {
+						$noStore = true;
+						if ($list.hasClass('row-cols-md-0')) {
+							uwp_list_view = 0;
+						} else if($list.hasClass('row-cols-md-1')){
+							uwp_list_view = 1;
+						} else if($list.hasClass('row-cols-md-2')){
+							uwp_list_view = 2;
+						} else if($list.hasClass('row-cols-md-3')){
+							uwp_list_view = 3;
+						} else if($list.hasClass('row-cols-md-4')){
+							uwp_list_view = 4;
+						}else if($list.hasClass('row-cols-md-5')){
+							uwp_list_view = 5;
+						} else {
+							uwp_list_view = 1;
+						}
+					}
+					uwp_list_view_select(uwp_list_view, $noStore);
+				}, 10); // we need to give it a very short time so the page loads the actual html
+			}
+			/* ]]&gt; */</script>
+		        <div class="uwp-pagination">
+            <section class="px-0 py-2 w-100">
+	<nav class="navigation pagination" role="navigation" aria-label="Posts navigation">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="uwp-nav-links"><ul class='pagination m-0 p-0'><li class='page-item active'><span aria-current="page" class="page-link current">1</span></li><li class='page-item '><a class="page-link" href="./page/2/">2</a></li><li class='page-item '><a class="page-link" href="./page/3/">3</a></li><li class='page-item '><a class="next page-link" href="./page/2/"><span class="nav-next-text sr-only">Older posts</span> <i class="fas fa-chevron-right"></i></a></li></ul></div>
+	</nav></section>        </div>
+        </div></div></div></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+						</div>
+					</div>
+			</div><!-- .entry-content -->
+
+	</article><!-- #post-208 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	</div></div>
+	
+	
+	<footer id="colophon" class="site-footer">
+		<div class="container">
+			<div class="row">
+					
+	<div class="site-info col-md-12">
+		
+					<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: <a href="https://athemes.com/theme/airi" rel="nofollow">Airi</a> by aThemes.			</div><!-- .site-info -->
+	
+				</div>
+		</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<style>html{font-size:16px;}</style><link rel='stylesheet' id='jcrop-css'  href='./wp-includes/js/jcrop/jquery.Jcrop.min.css?ver=0.9.12' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css'  href='./wp-content/plugins/userswp/assets/css/jquery-ui.css?ver=5.5.1' type='text/css' media='all' />
+<script type='text/javascript' src='./wp-content/plugins/elementor/assets/lib/slick/slick.min.js?ver=1.8.1' id='jquery-slick-js'></script>
+<script type='text/javascript' src='./wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='./wp-content/themes/airi/js/vendor/navigation.js?ver=20180717' id='airi-navigation-js'></script>
+<script type='text/javascript' src='https://www.recaptcha.net/recaptcha/api.js?onload=uwp_init_recaptcha&#038;hl=en&#038;render=explicit&#038;ver=1.3.6' id='uwp_recaptcha_js_api-js'></script>
+<script type='text/javascript' id='uwp_recaptcha_js_api-js-after'>
+            
+                function uwp_init_recaptcha() {
+                    if ( jQuery('.uwp-captcha-render').length) {
+                        jQuery('.uwp-captcha-render').each(function() {
+                            if(jQuery(this).html()==''){
+                                var container = jQuery(this).attr('id');
+                                if (container) {
+                                    try {
+                                        eval(container + '()');
+                                    } catch(err) {
+                                        console.log(err);
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+            
+            
+</script>
+<script type='text/javascript' src='./wp-content/themes/airi/js/vendor/skip-link-focus-fix.js?ver=20151215' id='airi-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='./wp-content/themes/airi/js/vendor/scripts.js?ver=20180223' id='airi-scripts-js'></script>
+<script type='text/javascript' src='./wp-content/themes/airi/js/custom/custom.min.js?ver=20181017' id='airi-main-js'></script>
+<script type='text/javascript' src='./wp-includes/js/wp-embed.min.js?ver=5.5.1' id='wp-embed-js'></script>
+<script type='text/javascript' src='./wp-includes/js/jcrop/jquery.Jcrop.min.js?ver=0.9.12' id='jcrop-js'></script>
+<script type='text/javascript' src='./wp-includes/js/jquery/ui/core.min.js?ver=1.11.4' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='./wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4' id='jquery-ui-widget-js'></script>
+<script type='text/javascript' src='./wp-includes/js/jquery/ui/progressbar.min.js?ver=1.11.4' id='jquery-ui-progressbar-js'></script>
+<script type='text/javascript' src='./wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.0.12' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='./wp-includes/js/jquery/ui/position.min.js?ver=1.11.4' id='jquery-ui-position-js'></script>
+<script type='text/javascript' src='./wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1' id='elementor-dialog-js'></script>
+<script type='text/javascript' src='./wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='./wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
+<script type='text/javascript' src='./wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.0.12' id='share-link-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.12","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":".\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":208,"title":"RS%20Contact%20Management","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.0.12' id='elementor-frontend-js'></script>
+
+</body>
+</html>
